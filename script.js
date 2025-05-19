@@ -171,6 +171,18 @@ style.textContent = `
         animation: fadeInUp 0.6s ease-out forwards;
         animation-delay: calc(var(--index) * 0.1s);
     }
+    
+    /* Mobile touch feedback */
+    .service-card.touch-active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+    
+    @media (max-width: 768px) {
+        .service-card {
+            -webkit-tap-highlight-color: transparent;
+        }
+    }
 `;
 document.head.appendChild(style);
 
@@ -184,20 +196,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Service card interactive mouse tracking
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+// Service card interactive mouse tracking (desktop only)
+if (window.innerWidth > 768) {
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
         
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
+        card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--mouse-x', '50%');
+            card.style.setProperty('--mouse-y', '50%');
+        });
+    });
+}
+
+// Add touch feedback for mobile
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('touchstart', () => {
+        card.classList.add('touch-active');
     });
     
-    card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--mouse-x', '50%');
-        card.style.setProperty('--mouse-y', '50%');
+    card.addEventListener('touchend', () => {
+        setTimeout(() => {
+            card.classList.remove('touch-active');
+        }, 300);
     });
 });
 
