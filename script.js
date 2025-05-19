@@ -151,6 +151,26 @@ style.textContent = `
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+    
+    /* Service card interactive gradient */
+    .service-card::before {
+        background: radial-gradient(
+            circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(27, 153, 139, 0.08) 0%,
+            transparent 50%
+        );
+    }
+    
+    /* Process step animations */
+    .process-step {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
+    .process-step.visible {
+        animation: fadeInUp 0.6s ease-out forwards;
+        animation-delay: calc(var(--index) * 0.1s);
+    }
 `;
 document.head.appendChild(style);
 
@@ -162,6 +182,39 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.add('loaded');
         });
     });
+});
+
+// Service card interactive mouse tracking
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--mouse-x', '50%');
+        card.style.setProperty('--mouse-y', '50%');
+    });
+});
+
+// Process step animations
+const processObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            entry.target.style.setProperty('--index', index);
+            entry.target.classList.add('visible');
+            processObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.process-step').forEach((step, index) => {
+    step.style.setProperty('--index', index);
+    processObserver.observe(step);
 });
 
 // Parallax effect for hero section
