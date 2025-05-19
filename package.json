@@ -1,0 +1,22 @@
+{
+  "name": "contractor-landing-page",
+  "version": "1.0.0",
+  "description": "Professional landing page for digital services agency",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html",
+    "serve": "python3 -m http.server 8000",
+    "lint": "echo 'No linting configured for static HTML/CSS/JS'"
+  },
+  "keywords": [
+    "landing-page",
+    "digital-agency",
+    "website",
+    "mobile-apps",
+    "ai-integration"
+  ],
+  "author": "Your Agency Name",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

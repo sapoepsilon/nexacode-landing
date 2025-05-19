@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>NexaCode | Custom Web, Mobile & AI Development Solutions</title>
+    <meta name="description" content="Transform your business with custom websites, mobile apps, and AI integration from NexaCode. Salt Lake City's premier digital solutions provider.">
+    <meta name="keywords" content="custom website development, mobile app development, AI integration services, digital transformation agency, custom software solutions, Salt Lake City tech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="NexaCode | Custom Web, Mobile & AI Development">
+    <meta property="og:description" content="Transform your business with custom digital solutions from NexaCode">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2D3047',
+                        'secondary': '#1B998B',
+                        'accent': '#FF9B71',
+                        'light': '#F5F5F5',
+                        'dark': '#333333'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif'],
+                        'mono': ['Roboto Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NexaCode",
+        "description": "Custom web, mobile, and AI development services in Salt Lake City",
+        "url": "https://nexacode.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Salt Lake City",
+            "addressRegion": "UT",
+            "addressCountry": "USA"
+        },
+        "services": ["Website Development", "Mobile Applications", "AI Integration", "Custom Software Development"]
+    }
+    </script>
+</head>
+<body class="font-opensans text-dark bg-light">
+    
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 bg-white shadow-md z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-montserrat text-2xl text-primary">
+                    <img src="logo.svg" alt="NexaCode Logo" class="h-10 w-auto">
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="md:hidden mobile-menu-button p-2">
+                    <svg class="menu-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="close-icon w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-white to-light min-h-[600px]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="font-montserrat text-4xl md:text-6xl text-primary mb-6 leading-tight">
+                        Transform Your Digital Vision Into Reality
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8">
+                        Custom websites, mobile apps, and AI integration from a team that delivers measurable results.
+                    </p>
+                    <button class="btn-primary bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 text-lg">
+                        Get a Free Consultation
+                    </button>
+                </div>
+                <div class="relative">
+                    <div class="hero-animation">
+                        <div class="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-10 rounded-3xl"></div>
+                        <div class="grid grid-cols-3 gap-4 p-8">
+                            <div class="tech-card">HTML5</div>
+                            <div class="tech-card">React</div>
+                            <div class="tech-card">Node.js</div>
+                            <div class="tech-card">Python</div>
+                            <div class="tech-card">AI/ML</div>
+                            <div class="tech-card">Mobile</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat text-3xl md:text-5xl text-primary mb-4">Our Services</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    We deliver end-to-end digital solutions that drive growth and innovation for your business.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card">
+                    <div class="service-icon bg-secondary">
+                        <i class="fas fa-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-montserrat text-xl text-primary mb-3">Website Development</h3>
+                    <p class="text-gray-700">Custom, high-performance websites that convert visitors into customers.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon bg-accent">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-montserrat text-xl text-primary mb-3">Mobile Applications</h3>
+                    <p class="text-gray-700">Intuitive, responsive mobile experiences that keep your business in your customers' pockets.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon bg-primary">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-montserrat text-xl text-primary mb-3">AI Integration</h3>
+                    <p class="text-gray-700">Smart solutions that automate processes, personalize experiences, and uncover valuable insights.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon bg-secondary">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-montserrat text-xl text-primary mb-3">Custom Software Development</h3>
+                    <p class="text-gray-700">Tailored digital solutions that address your unique business challenges and create competitive advantages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat text-3xl md:text-5xl text-primary mb-4">Our Portfolio</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Explore our successful projects and see how we've helped businesses transform digitally.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="portfolio-card">
+                    <div class="portfolio-image bg-gradient-to-br from-secondary to-primary relative overflow-hidden hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/1B998B/FFFFFF?text=ViusBuilt" alt="ViusBuilt Project" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-montserrat text-xl text-primary mb-2">ViusBuilt.com</h3>
+                        <p class="text-gray-700 mb-4">Construction management platform streamlining project workflows and communication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <p class="text-sm text-secondary font-semibold mb-4">50% increase in project efficiency</p>
+                        <button class="btn-secondary bg-secondary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">View Case Study</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image bg-gradient-to-br from-accent to-secondary relative overflow-hidden hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/FF9B71/FFFFFF?text=EstmtAgent" alt="EstmtAgent Project" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-montserrat text-xl text-primary mb-2">EstmtAgent.com</h3>
+                        <p class="text-gray-700 mb-4">Real estate technology solution revolutionizing property estimation and listing.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                        </div>
+                        <p class="text-sm text-secondary font-semibold mb-4">3x faster property valuations</p>
+                        <button class="btn-secondary bg-secondary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">View Case Study</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image bg-gradient-to-br from-primary to-accent relative overflow-hidden hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/2D3047/FFFFFF?text=SkillDrop" alt="SkillDrop Project" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-montserrat text-xl text-primary mb-2">SkillDrop.ru</h3>
+                        <p class="text-gray-700 mb-4">Educational technology platform connecting learners with expert instructors globally.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <p class="text-sm text-secondary font-semibold mb-4">10,000+ active users</p>
+                        <button class="btn-secondary bg-secondary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">View Case Study</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat text-3xl md:text-5xl text-primary mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Hear from businesses that have transformed with our custom digital solutions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-light rounded-xl p-8">
+                    <div class="mb-6">
+                        <i class="fas fa-quote-left text-3xl text-secondary opacity-50"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "NexaCode transformed our business processes completely. Their custom software solution reduced our operational costs by 35% and improved our team's productivity significantly."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold text-primary">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">CEO, TechVantage</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-light rounded-xl p-8">
+                    <div class="mb-6">
+                        <i class="fas fa-quote-left text-3xl text-secondary opacity-50"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "The AI integration NexaCode developed for our platform has been a game-changer. We're now able to provide personalized recommendations that have increased our conversion rate by 50%."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold text-primary">Mark Chen</h4>
+                            <p class="text-sm text-gray-600">CTO, DataDrive Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-light rounded-xl p-8">
+                    <div class="mb-6">
+                        <i class="fas fa-quote-left text-3xl text-secondary opacity-50"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Working with NexaCode felt like having an extended tech team. They delivered our mobile app ahead of schedule, and the quality exceeded our expectations."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold text-primary">Emily Rodriguez</h4>
+                            <p class="text-sm text-gray-600">Founder, HealthConnect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat text-3xl md:text-5xl text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Find answers to common questions about our services and process.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="faq-item mb-6">
+                    <button type="button" class="faq-question w-full text-left p-6 bg-white rounded-lg font-semibold text-primary flex justify-between items-center">
+                        <span>How long does a typical project take?</span>
+                        <div class="faq-icon text-secondary">
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-white -mt-2 rounded-b-lg">
+                        <p class="text-gray-700">
+                            Our projects typically take 1-12 weeks to complete, depending on complexity and scope. Simple websites might be ready in as little as 1-2 weeks, while complex applications with custom features can take 8-12 weeks. We'll provide a detailed timeline after our initial consultation to set clear expectations.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item mb-6">
+                    <button type="button" class="faq-question w-full text-left p-6 bg-white rounded-lg font-semibold text-primary flex justify-between items-center">
+                        <span>What technologies do you work with?</span>
+                        <div class="faq-icon text-secondary">
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-white -mt-2 rounded-b-lg">
+                        <p class="text-gray-700">
+                            We work with a comprehensive range of modern technologies:<br><br>
+                            <strong>Frontend:</strong> React, Vue.js, Angular, HTML5, CSS3, JavaScript/TypeScript<br>
+                            <strong>Backend:</strong> Node.js, Python, Django, Express.js<br>
+                            <strong>Mobile:</strong> React Native, Flutter, iOS (Swift), Android (Kotlin)<br>
+                            <strong>AI/ML:</strong> TensorFlow, PyTorch, scikit-learn<br>
+                            <strong>Databases:</strong> PostgreSQL, MongoDB, MySQL<br>
+                            <strong>Cloud:</strong> AWS, Google Cloud, Azure<br><br>
+                            We select the optimal tech stack based on your project requirements and scalability needs.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item mb-6">
+                    <button type="button" class="faq-question w-full text-left p-6 bg-white rounded-lg font-semibold text-primary flex justify-between items-center">
+                        <span>Do you provide ongoing support after launch?</span>
+                        <div class="faq-icon text-secondary">
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-white -mt-2 rounded-b-lg">
+                        <p class="text-gray-700">
+                            Yes! We offer both one-time payment options and subscription plans. Our subscription maintenance plans start at $199/month and include regular updates, security patches, and technical support. We can also work on a project-by-project basis if you prefer a one-time payment structure.<br><br>
+                            All plans include:<br>
+                            • Bug fixes and security updates<br>
+                            • Performance optimization<br>
+                            • 24/7 monitoring and support<br>
+                            • Regular backups<br>
+                            • Feature enhancements (based on plan)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-montserrat text-3xl md:text-5xl text-primary mb-6">About Our Agency</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        We are a forward-thinking digital services agency with a passion for transforming businesses through technology. Our team combines deep technical expertise with a thorough understanding of business challenges.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        From startups to enterprises, we've helped dozens of companies navigate their digital transformation journey, delivering solutions that not only meet today's needs but scale for tomorrow's opportunities.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="font-montserrat text-3xl text-secondary mb-2">50+</div>
+                            <div class="text-gray-700">Projects Delivered</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-montserrat text-3xl text-secondary mb-2">5+</div>
+                            <div class="text-gray-700">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-montserrat text-3xl text-secondary mb-2">100%</div>
+                            <div class="text-gray-700">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="about-visual">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-accent/20 rounded-3xl"></div>
+                        <div class="relative p-8">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="skill-box">Frontend Development</div>
+                                <div class="skill-box">Backend Development</div>
+                                <div class="skill-box">Mobile Development</div>
+                                <div class="skill-box">AI & Machine Learning</div>
+                                <div class="skill-box">Cloud Architecture</div>
+                                <div class="skill-box">DevOps</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-white to-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat text-3xl md:text-5xl text-primary mb-4">Let's Build Something Amazing Together</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Ready to transform your digital vision into reality? Get in touch and let's discuss your project.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="font-montserrat text-2xl text-primary mb-6">Send Us a Message</h3>
+                        <form class="contact-form space-y-6">
+                            <div>
+                                <label class="block font-semibold text-gray-700 mb-2">Name <span class="text-accent">*</span></label>
+                                <input type="text" required class="form-input-modern" placeholder="John Doe" name="name">
+                                <span class="error-message text-red-500 text-sm hidden">Please enter your name</span>
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-gray-700 mb-2">Email <span class="text-accent">*</span></label>
+                                <input type="email" required class="form-input-modern" placeholder="john@example.com" name="email">
+                                <span class="error-message text-red-500 text-sm hidden">Please enter a valid email</span>
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-gray-700 mb-2">Phone</label>
+                                <input type="tel" class="form-input-modern" placeholder="+1 (801) 635-0784" name="phone">
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-gray-700 mb-2">Project Description <span class="text-accent">*</span></label>
+                                <textarea required class="form-input-modern min-h-[150px] resize-y" rows="5" placeholder="Tell us about your project..." name="message"></textarea>
+                                <span class="error-message text-red-500 text-sm hidden">Please describe your project</span>
+                            </div>
+                            <!-- Honeypot for spam protection -->
+                            <div class="hidden">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <button type="submit" class="btn-primary w-full text-lg font-semibold bg-accent hover:bg-opacity-90">
+                                Send Message
+                            </button>
+                            <div class="success-message mt-4 p-4 bg-green-100 text-green-700 rounded-lg hidden">
+                                <p class="font-semibold">Thank you for your message!</p>
+                                <p>We'll get back to you within 24 hours.</p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="font-montserrat text-2xl text-primary mb-6">Get in Touch</h3>
+                            <p class="text-gray-700 mb-8">
+                                We're here to help bring your digital vision to life. Whether you have a question about our services, pricing, or want to discuss a potential project, don't hesitate to reach out.
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-secondary text-white rounded-full p-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Email</h4>
+                                    <a href="mailto:izzy@estmtagent.com" class="text-gray-700 hover:text-secondary transition-colors">izzy@estmtagent.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-secondary text-white rounded-full p-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Phone</h4>
+                                    <a href="tel:+18016350784" class="text-gray-700 hover:text-secondary transition-colors">+1 (801) 635-0784</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-secondary text-white rounded-full p-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary">Location</h4>
+                                    <p class="text-gray-700">Salt Lake City, UT, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Call to Action -->
+                        <div class="bg-light rounded-xl p-6">
+                            <h4 class="font-montserrat text-xl text-primary mb-3">Office Hours</h4>
+                            <p class="text-gray-700">
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday - Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-6">
+                <p class="mb-4">&copy; 2024 NexaCode. All rights reserved.</p>
+                <p class="text-sm opacity-75 mb-6">Digital innovation, engineered for growth.</p>
+                <div class="flex justify-center">
+                    <a href="https://linkedin.com/company/nexacode" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom Styles -->
+    <style>
+        .nav-link {
+            @apply text-gray-700 hover:text-secondary transition-colors duration-300 font-semibold;
+        }
+        
+        .btn-primary {
+            @apply bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105;
+        }
+        
+        .btn-secondary {
+            @apply bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300;
+        }
+        
+        .tech-card {
+            @apply bg-white rounded-lg p-4 text-center font-mono text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105;
+        }
+        
+        .service-card {
+            @apply bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center;
+        }
+        
+        .service-icon {
+            @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6;
+        }
+        
+        .portfolio-card {
+            @apply bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:-translate-y-1;
+        }
+        
+        .portfolio-image {
+            @apply h-48 w-full overflow-hidden;
+        }
+        
+        .portfolio-image img {
+            @apply transition-transform duration-500 hover:scale-110;
+        }
+        
+        .testimonial-card {
+            @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg;
+        }
+        
+        .faq-item {
+            @apply transition-all duration-300;
+        }
+        
+        .faq-question {
+            @apply transition-all duration-300 hover:shadow-lg hover:bg-gray-50;
+        }
+        
+        .faq-answer {
+            @apply transition-all duration-300 ease-in-out;
+        }
+        
+        .faq-answer.hidden {
+            @apply opacity-0 max-h-0 overflow-hidden;
+        }
+        
+        .faq-answer:not(.hidden) {
+            @apply opacity-100 max-h-[500px];
+        }
+        
+        .service-card {
+            @apply bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 text-center hover:transform hover:-translate-y-1 border border-gray-100;
+        }
+        
+        .tech-tag {
+            @apply bg-light text-primary px-3 py-1 rounded-full text-sm font-semibold;
+        }
+        
+        .skill-box {
+            @apply bg-white/90 backdrop-blur-sm rounded-lg p-4 text-center font-semibold text-primary shadow-md;
+        }
+        
+        .form-input {
+            @apply w-full px-6 py-4 rounded-lg bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-secondary transition-all duration-300 text-lg;
+        }
+        
+        .form-input:focus {
+            @apply border-secondary shadow-lg bg-white/20;
+        }
+        
+        .form-input.error {
+            @apply border-red-500;
+        }
+        
+        .form-input-modern {
+            @apply w-full px-5 py-3 rounded-lg bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-secondary focus:bg-white transition-all duration-300;
+        }
+        
+        .form-input-modern:focus {
+            @apply border-secondary shadow-lg;
+        }
+        
+        .form-input-modern.error {
+            @apply border-red-500 bg-red-50;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .hero-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Mobile responsive improvements */
+        @media (max-width: 768px) {
+            .btn-primary, .btn-secondary {
+                @apply px-6 py-3 text-base;
+            }
+            
+            .service-card {
+                @apply p-6;
+            }
+            
+            .portfolio-card {
+                @apply mb-6;
+            }
+            
+            .tech-card {
+                @apply p-3 text-xs;
+            }
+            
+            button, a {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+        
+        /* Improved form inputs for mobile */
+        .form-input {
+            @apply min-h-[44px];
+        }
+        
+        /* Better contrast for text */
+        .text-gray-700 {
+            color: #374151;
+        }
+        
+        /* Enhanced button hover states */
+        button:hover, .btn-primary:hover, .btn-secondary:hover {
+            @apply shadow-xl;
+        }
+    </style>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>
