@@ -205,40 +205,134 @@
             <!-- Service Process Section -->
             <div class="mt-16 md:mt-20 pt-8 md:pt-12 border-t border-gray-200">
                 <h3 class="font-montserrat text-xl sm:text-2xl md:text-3xl text-primary text-center mb-8 md:mb-12">Our Process</h3>
-                <div class="flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto space-y-8 md:space-y-0">
-                    <div class="process-step text-center">
-                        <div class="process-icon bg-secondary mx-auto">
-                            <i class="fas fa-comments text-white text-xl md:text-2xl"></i>
+                
+                <!-- Desktop Timeline -->
+                <div class="hidden md:block relative max-w-5xl mx-auto px-12">
+                    <!-- Process Timeline Line -->
+                    <div class="absolute h-1 bg-gradient-to-r from-secondary via-accent to-primary rounded-full top-12 left-20 right-20 z-0"></div>
+                    
+                    <div class="flex justify-between items-start relative z-10">
+                        <!-- Step 1: Consult -->
+                        <div class="process-step-enhanced group">
+                            <div class="relative">
+                                <div class="process-number absolute -top-2 -left-2 bg-white text-secondary rounded-full h-8 w-8 flex items-center justify-center font-bold shadow-md z-20">1</div>
+                                <div class="process-icon-enhanced bg-secondary group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                    <i class="fas fa-comments text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <h4 class="font-semibold text-primary mt-4 text-lg">Consult</h4>
+                            <p class="text-sm text-gray-600 mt-2">Understanding your vision</p>
+                            <div class="process-detail opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-24 left-0 bg-white p-4 rounded-lg shadow-xl w-52 z-30">
+                                <p class="text-xs text-gray-700">We start with in-depth discussions to understand your business goals, target audience, and project requirements.</p>
+                            </div>
                         </div>
-                        <h4 class="font-semibold text-primary mt-3 md:mt-4 text-base md:text-lg">Consult</h4>
-                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">Understanding your vision</p>
+                        
+                        <!-- Step 2: Design -->
+                        <div class="process-step-enhanced group">
+                            <div class="relative">
+                                <div class="process-number absolute -top-2 -left-2 bg-white text-accent rounded-full h-8 w-8 flex items-center justify-center font-bold shadow-md z-20">2</div>
+                                <div class="process-icon-enhanced bg-accent group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                    <i class="fas fa-drafting-compass text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <h4 class="font-semibold text-primary mt-4 text-lg">Design</h4>
+                            <p class="text-sm text-gray-600 mt-2">Creating the blueprint</p>
+                            <div class="process-detail opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-24 left-0 bg-white p-4 rounded-lg shadow-xl w-52 z-30">
+                                <p class="text-xs text-gray-700">Our designers create beautiful, user-friendly interfaces and develop the architecture for your solution.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Develop -->
+                        <div class="process-step-enhanced group">
+                            <div class="relative">
+                                <div class="process-number absolute -top-2 -left-2 bg-white text-primary rounded-full h-8 w-8 flex items-center justify-center font-bold shadow-md z-20">3</div>
+                                <div class="process-icon-enhanced bg-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                    <i class="fas fa-code text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <h4 class="font-semibold text-primary mt-4 text-lg">Develop</h4>
+                            <p class="text-sm text-gray-600 mt-2">Building your solution</p>
+                            <div class="process-detail opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-24 left-0 bg-white p-4 rounded-lg shadow-xl w-52 z-30">
+                                <p class="text-xs text-gray-700">Our expert developers bring the design to life using cutting-edge technologies and best practices.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4: Launch -->
+                        <div class="process-step-enhanced group">
+                            <div class="relative">
+                                <div class="process-number absolute -top-2 -left-2 bg-white text-purple-600 rounded-full h-8 w-8 flex items-center justify-center font-bold shadow-md z-20">4</div>
+                                <div class="process-icon-enhanced bg-purple-600 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                    <i class="fas fa-rocket text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <h4 class="font-semibold text-primary mt-4 text-lg">Launch</h4>
+                            <p class="text-sm text-gray-600 mt-2">Going live & beyond</p>
+                            <div class="process-detail opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-24 right-0 bg-white p-4 rounded-lg shadow-xl w-52 z-30">
+                                <p class="text-xs text-gray-700">We deploy your solution, provide comprehensive training, and offer ongoing support for continued success.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="process-connector-mobile"></div>
-                    <div class="process-connector"></div>
-                    <div class="process-step text-center">
-                        <div class="process-icon bg-accent mx-auto">
-                            <i class="fas fa-drafting-compass text-white text-xl md:text-2xl"></i>
+                </div>
+                
+                <!-- Mobile Vertical Timeline -->
+                <div class="md:hidden px-4">
+                    <div class="relative">
+                        <!-- Vertical Timeline Line -->
+                        <div class="absolute h-full w-1 bg-gradient-to-b from-secondary via-accent to-primary left-8 top-0 rounded-full"></div>
+                        
+                        <div class="space-y-12">
+                            <!-- Step 1: Consult -->
+                            <div class="process-step-mobile relative pl-16">
+                                <div class="process-icon-mobile absolute left-4 w-9 h-9 bg-secondary rounded-full flex items-center justify-center shadow-lg transform -translate-x-1/2">
+                                    <i class="fas fa-comments text-white text-sm"></i>
+                                </div>
+                                <div class="process-number-mobile absolute left-0 bg-white text-secondary rounded-full h-6 w-6 flex items-center justify-center font-bold text-xs shadow-md">1</div>
+                                <div class="bg-white p-4 rounded-lg shadow-md">
+                                    <h4 class="font-semibold text-primary text-base mb-1">Consult</h4>
+                                    <p class="text-xs text-gray-600 mb-2">Understanding your vision</p>
+                                    <p class="text-xs text-gray-700">We start with in-depth discussions to understand your business goals and requirements.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2: Design -->
+                            <div class="process-step-mobile relative pl-16">
+                                <div class="process-icon-mobile absolute left-4 w-9 h-9 bg-accent rounded-full flex items-center justify-center shadow-lg transform -translate-x-1/2">
+                                    <i class="fas fa-drafting-compass text-white text-sm"></i>
+                                </div>
+                                <div class="process-number-mobile absolute left-0 bg-white text-accent rounded-full h-6 w-6 flex items-center justify-center font-bold text-xs shadow-md">2</div>
+                                <div class="bg-white p-4 rounded-lg shadow-md">
+                                    <h4 class="font-semibold text-primary text-base mb-1">Design</h4>
+                                    <p class="text-xs text-gray-600 mb-2">Creating the blueprint</p>
+                                    <p class="text-xs text-gray-700">Our designers create beautiful interfaces and develop the architecture.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3: Develop -->
+                            <div class="process-step-mobile relative pl-16">
+                                <div class="process-icon-mobile absolute left-4 w-9 h-9 bg-primary rounded-full flex items-center justify-center shadow-lg transform -translate-x-1/2">
+                                    <i class="fas fa-code text-white text-sm"></i>
+                                </div>
+                                <div class="process-number-mobile absolute left-0 bg-white text-primary rounded-full h-6 w-6 flex items-center justify-center font-bold text-xs shadow-md">3</div>
+                                <div class="bg-white p-4 rounded-lg shadow-md">
+                                    <h4 class="font-semibold text-primary text-base mb-1">Develop</h4>
+                                    <p class="text-xs text-gray-600 mb-2">Building your solution</p>
+                                    <p class="text-xs text-gray-700">Our developers bring the design to life using cutting-edge technologies.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 4: Launch -->
+                            <div class="process-step-mobile relative pl-16">
+                                <div class="process-icon-mobile absolute left-4 w-9 h-9 bg-purple-600 rounded-full flex items-center justify-center shadow-lg transform -translate-x-1/2">
+                                    <i class="fas fa-rocket text-white text-sm"></i>
+                                </div>
+                                <div class="process-number-mobile absolute left-0 bg-white text-purple-600 rounded-full h-6 w-6 flex items-center justify-center font-bold text-xs shadow-md">4</div>
+                                <div class="bg-white p-4 rounded-lg shadow-md">
+                                    <h4 class="font-semibold text-primary text-base mb-1">Launch</h4>
+                                    <p class="text-xs text-gray-600 mb-2">Going live & beyond</p>
+                                    <p class="text-xs text-gray-700">We deploy your solution and provide ongoing support for continued success.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="font-semibold text-primary mt-3 md:mt-4 text-base md:text-lg">Design</h4>
-                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">Creating the blueprint</p>
-                    </div>
-                    <div class="process-connector-mobile"></div>
-                    <div class="process-connector"></div>
-                    <div class="process-step text-center">
-                        <div class="process-icon bg-primary mx-auto">
-                            <i class="fas fa-code text-white text-xl md:text-2xl"></i>
-                        </div>
-                        <h4 class="font-semibold text-primary mt-3 md:mt-4 text-base md:text-lg">Develop</h4>
-                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">Building your solution</p>
-                    </div>
-                    <div class="process-connector-mobile"></div>
-                    <div class="process-connector"></div>
-                    <div class="process-step text-center">
-                        <div class="process-icon bg-purple-600 mx-auto">
-                            <i class="fas fa-rocket text-white text-xl md:text-2xl"></i>
-                        </div>
-                        <h4 class="font-semibold text-primary mt-3 md:mt-4 text-base md:text-lg">Launch</h4>
-                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">Going live & beyond</p>
                     </div>
                 </div>
             </div>
@@ -675,6 +769,55 @@
         
         .process-connector-mobile {
             @apply md:hidden w-1 h-8 bg-gray-300 mx-auto my-4;
+        }
+        
+        /* Enhanced Process Section Styles */
+        .process-step-enhanced {
+            @apply text-center relative;
+            width: 20%;
+        }
+        
+        .process-icon-enhanced {
+            @apply w-20 h-20 rounded-full flex items-center justify-center mx-auto relative z-10;
+        }
+        
+        .process-number {
+            @apply transition-all duration-300;
+        }
+        
+        .process-detail {
+            @apply pointer-events-none;
+        }
+        
+        .process-step-enhanced:hover .process-number {
+            @apply scale-110;
+        }
+        
+        .process-step-mobile {
+            @apply transition-all duration-300;
+        }
+        
+        .process-icon-mobile {
+            z-index: 10;
+        }
+        
+        .process-number-mobile {
+            z-index: 11;
+        }
+        
+        @keyframes growLine {
+            from { 
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+            to { 
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+        
+        .process-timeline-line {
+            animation: growLine 1.5s ease-out forwards;
         }
         
         @keyframes fadeIn {
