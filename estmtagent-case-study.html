@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstmtAgent Case Study | NexaCode</title>
+    <meta name="description" content="Learn how NexaCode developed EstmtAgent's AI-powered construction estimation platform that revolutionizes the estimation process.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2D3047',
+                        'secondary': '#1B998B',
+                        'accent': '#FF9B71',
+                        'light': '#F5F5F5',
+                        'dark': '#333333'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-opensans text-dark bg-light">
+    
+    <!-- Header -->
+    <header class="fixed w-full top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-montserrat text-2xl text-primary">
+                    <img src="logo.svg" alt="NexaCode Logo" class="h-10 w-auto">
+                </a>
+                <a href="index.html#portfolio" class="btn-secondary px-6 py-2 rounded-lg font-semibold">
+                    Back to Portfolio
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Case Study Content -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-6">
+            <!-- Hero Section -->
+            <div class="text-center mb-16">
+                <h1 class="font-montserrat text-4xl md:text-6xl text-primary mb-6">EstmtAgent Case Study</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Building the future of construction estimation with AI-powered automation and intelligent document processing
+                </p>
+            </div>
+            
+            <!-- Project Overview -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="font-montserrat text-3xl text-primary mb-6">Project Overview</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Client</h3>
+                            <p class="text-gray-700">EstmtAgent - Construction Tech Startup</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Industry</h3>
+                            <p class="text-gray-700">Construction Estimation Software</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Timeline</h3>
+                            <p class="text-gray-700">8 months (MVP to Alpha Release)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Tech Stack</h3>
+                            <p class="text-gray-700">Vue.js, Python, AI/ML, PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Challenge -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="font-montserrat text-3xl text-primary mb-6">The Challenge</h2>
+                    <p class="text-gray-700 mb-4">
+                        EstmtAgent identified a critical gap in the construction industry: the estimation process was overwhelmingly manual and error-prone. Construction professionals were facing:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Hours of manual data entry for estimate sheets</li>
+                        <li>Difficulty managing multiple estimate versions</li>
+                        <li>Lack of intelligent search across project documents</li>
+                        <li>Time-consuming takeoffs from floor plans</li>
+                        <li>No automated price tracking for materials and labor</li>
+                    </ul>
+                </div>
+                
+                <!-- Solution -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="font-montserrat text-3xl text-primary mb-6">Our Solution</h2>
+                    <p class="text-gray-700 mb-6">
+                        We developed a cutting-edge AI-powered estimation platform that transforms how construction professionals create and manage estimates:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-light rounded-lg p-6">
+                            <h3 class="font-semibold text-primary mb-3">AI-Powered Data Entry</h3>
+                            <p class="text-gray-700">Machine learning algorithms that instantly generate accurate estimate sheets from project specifications</p>
+                        </div>
+                        <div class="bg-light rounded-lg p-6">
+                            <h3 class="font-semibold text-primary mb-3">Intelligent Document Search</h3>
+                            <p class="text-gray-700">Semantic search capabilities across all project documents for quick insight extraction</p>
+                        </div>
+                        <div class="bg-light rounded-lg p-6">
+                            <h3 class="font-semibold text-primary mb-3">VLM-Powered Takeoffs</h3>
+                            <p class="text-gray-700">Visual Language Model processing for automated measurements from floor plans and PDFs</p>
+                        </div>
+                        <div class="bg-light rounded-lg p-6">
+                            <h3 class="font-semibold text-primary mb-3">Smart Version Control</h3>
+                            <p class="text-gray-700">Automatic file management with comprehensive version tracking</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="font-montserrat text-3xl text-primary mb-6">Results</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="font-montserrat text-4xl text-secondary mb-2">3x</div>
+                            <p class="text-gray-700">Faster property valuations</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-montserrat text-4xl text-secondary mb-2">80%</div>
+                            <p class="text-gray-700">Reduction in data entry time</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-montserrat text-4xl text-secondary mb-2">95%</div>
+                            <p class="text-gray-700">Accuracy in automated takeoffs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="font-montserrat text-3xl text-primary mb-6">Key Features</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-secondary text-white rounded-full p-2 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">AI Knowledge Base</h3>
+                                <p class="text-gray-700">Intelligent document repository with semantic search capabilities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-secondary text-white rounded-full p-2 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">Automated Price Tracking</h3>
+                                <p class="text-gray-700">Real-time material and labor cost updates integrated into estimates</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-secondary text-white rounded-full p-2 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">Smart Integrations</h3>
+                                <p class="text-gray-700">Seamless connection with Google search and other construction tools</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technologies Used -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="font-montserrat text-3xl text-primary mb-6">Technologies & Approach</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-primary mb-3">Frontend & UX</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Vue.js 3 for reactive interfaces</li>
+                                <li>Vuex for state management</li>
+                                <li>Tailwind CSS for modern design</li>
+                                <li>Progressive Web App capabilities</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary mb-3">Backend & AI</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Python Flask API framework</li>
+                                <li>TensorFlow for ML models</li>
+                                <li>PostgreSQL for data persistence</li>
+                                <li>OpenAI integration for NLP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <h2 class="font-montserrat text-3xl text-primary mb-6">Ready to Transform Your Business?</h2>
+                <p class="text-xl text-gray-700 mb-8">Let's discuss how we can help you build an AI-powered solution.</p>
+                <a href="index.html#contact" class="btn-primary bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg">
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 NexaCode. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Custom Styles -->
+    <style>
+        .btn-primary {
+            @apply hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105;
+        }
+        
+        .btn-secondary {
+            @apply bg-secondary text-white hover:bg-opacity-90 transition-all duration-300;
+        }
+    </style>
+</body>
+</html>
