@@ -420,7 +420,7 @@
                         <i class="fas fa-quote-left text-3xl text-secondary opacity-50"></i>
                     </div>
                     <p class="text-gray-700 mb-6 italic">
-                        "NexaCode transformed our business processes completely. Their custom software solution reduced our operational costs by 35% and improved our team's productivity significantly."
+                        "Eazy Technology transformed our business processes completely. Their custom software solution reduced our operational costs by 35% and improved our team's productivity significantly."
                     </p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 bg-secondary rounded-full mr-4"></div>
@@ -436,7 +436,7 @@
                         <i class="fas fa-quote-left text-3xl text-secondary opacity-50"></i>
                     </div>
                     <p class="text-gray-700 mb-6 italic">
-                        "The AI integration NexaCode developed for our platform has been a game-changer. We're now able to provide personalized recommendations that have increased our conversion rate by 50%."
+                        "The AI integration Eazy Technology developed for our platform has been a game-changer. We're now able to provide personalized recommendations that have increased our conversion rate by 50%."
                     </p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 bg-secondary rounded-full mr-4"></div>
@@ -596,7 +596,8 @@
                     <!-- Contact Form -->
                     <div class="bg-white rounded-2xl shadow-xl p-8">
                         <h3 class="font-montserrat text-2xl text-primary mb-6">Send Us a Message</h3>
-                        <form class="contact-form space-y-6">
+                        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form space-y-6">
+                            <input type="hidden" name="form-name" value="contact">
                             <div>
                                 <label class="block font-semibold text-gray-700 mb-2">Name <span class="text-accent">*</span></label>
                                 <input type="text" required class="form-input-modern" placeholder="John Doe" name="name">
@@ -616,9 +617,9 @@
                                 <textarea required class="form-input-modern min-h-[150px] resize-y" rows="5" placeholder="Tell us about your project..." name="message"></textarea>
                                 <span class="error-message text-red-500 text-sm hidden">Please describe your project</span>
                             </div>
-                            <!-- Honeypot for spam protection -->
+                            <!-- Netlify spam protection -->
                             <div class="hidden">
-                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
                             </div>
                             <button type="submit" class="btn-primary w-full text-lg font-semibold bg-accent hover:bg-opacity-90">
                                 Send Message

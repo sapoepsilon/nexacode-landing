@@ -1,0 +1,52 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This is a static landing page for a digital services agency (Eazy Technology) specializing in custom websites, mobile apps, and AI integration. The project uses vanilla HTML, CSS, and JavaScript with Tailwind CSS via CDN for styling.
+
+## Development Commands
+
+```bash
+# Start local development (opens index.html in browser)
+npm start
+
+# Run local development server
+npm run serve
+
+# No linting is configured for this static site
+npm run lint
+```
+
+## Architecture & Structure
+
+This is a single-page application with the following structure:
+
+- **index.html** - Main landing page with all sections (hero, services, portfolio, process, contact)
+- **script.js** - Main JavaScript file handling animations, mobile menu, and contact form
+- **faq.js** - FAQ accordion functionality
+- **Case study pages** - Individual HTML files for portfolio items:
+  - estmtagent-case-study.html
+  - skilldrop-case-study.html
+  - viusbuilt-case-study.html
+
+The site uses Tailwind CSS configured directly in index.html with custom colors:
+- Primary: #2D3047 (Deep Indigo)
+- Secondary: #1B998B (Vibrant Teal)
+- Accent: #FF9B71 (Coral Orange)
+
+## Key Implementation Details
+
+1. **No build process** - This is a static site that runs directly in the browser
+2. **Tailwind via CDN** - Custom configuration is embedded in index.html
+3. **Contact form** - Currently frontend-only, requires backend integration for functionality
+4. **Mobile responsiveness** - Uses Tailwind's responsive utilities throughout
+5. **Deployment** - Can be deployed to any static hosting (Netlify configuration included)
+
+## When Making Changes
+
+- All styling should use Tailwind utility classes
+- Maintain the existing color scheme unless specifically asked to change it
+- The site is optimized for performance - avoid adding heavy dependencies
+- Case study pages follow the same structure and styling as the main page

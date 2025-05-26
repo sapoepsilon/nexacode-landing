@@ -68,22 +68,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Form submission
-const contactForm = document.querySelector('.contact-form');
-contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Collect form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Here you would normally send the data to a server
-    console.log('Form submitted with data:', data);
-    
-    // Show success message
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    contactForm.reset();
-});
+// Form submission - handled later in the script with full validation
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -392,7 +377,6 @@ if (contactForm) {
     const nameInput = contactForm.querySelector('input[name="name"]');
     const emailInput = contactForm.querySelector('input[name="email"]');
     const messageInput = contactForm.querySelector('textarea[name="message"]');
-    const honeypot = contactForm.querySelector('input[name="website"]');
     
     // Real-time validation
     nameInput.addEventListener('blur', () => validateField(nameInput, 'name'));
@@ -432,8 +416,9 @@ if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Check honeypot
-        if (honeypot.value) {
+        // Check honeypot (bot-field for Netlify)
+        const botField = contactForm.querySelector('input[name="bot-field"]');
+        if (botField && botField.value) {
             return; // Bot detected
         }
         
@@ -451,31 +436,38 @@ if (contactForm) {
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
         
-        // Simulate form submission
+        // Submit to Netlify Forms
         try {
             const formData = new FormData(contactForm);
-            // In a real application, you would send this data to a server
-            console.log('Form submitted:', Object.fromEntries(formData));
             
-            // Simulate server delay
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            // Submit form to Netlify
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
             
-            // Show success message
-            const successMessage = contactForm.querySelector('.success-message');
-            successMessage.classList.remove('hidden');
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMessage.classList.add('hidden');
-            }, 5000);
+            if (response.ok) {
+                // Show success message
+                const successMessage = contactForm.querySelector('.success-message');
+                successMessage.classList.remove('hidden');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
             
         } catch (error) {
+            console.error('Error:', error);
             alert('An error occurred. Please try again later.');
         } finally {
             submitButton.disabled = false;
