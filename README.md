@@ -1,17 +1,81 @@
-# Digital Services Agency Landing Page
+# Eazy Technology - Digital Services Agency Landing Page
 
-A modern, professional landing page for a digital services agency specializing in custom websites, mobile apps, and AI integration.
+A modern, professional landing page for Eazy Technology - a digital services agency specializing in custom websites, mobile apps, and AI integration.
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v14 or higher) - for running the development server
+- A modern web browser
+- Git (optional, for cloning the repository)
+
+### Running the Project
+
+1. **Clone the repository** (or download the ZIP file):
+   ```bash
+   git clone https://github.com/yourusername/contractor_landing_page.git
+   cd contractor_landing_page
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+   This will open the website in your default browser at `http://localhost:3000`
+
+   **Alternative methods:**
+   - Run with live reload: `npm run serve`
+   - Or simply open `index.html` directly in your browser (no server required)
+
+### Development Commands
+
+```bash
+# Start development server (opens in browser)
+npm start
+
+# Run local development server with live reload
+npm run serve
+
+# Run linting (when configured)
+npm run lint
+```
 
 ## Features
 
 - Responsive design that works on all devices
-- Modern UI with Tailwind CSS
+- Modern UI with Tailwind CSS via CDN
 - Smooth animations and micro-interactions
 - SEO optimized with meta tags and schema markup
 - Fast loading with optimized assets
-- Contact form functionality
-- Portfolio showcase
-- Service sections
+- Netlify Forms integration for contact form
+- Portfolio showcase with case studies
+- Service sections with hover effects
+- FAQ accordion
+- Mobile-optimized navigation
+
+## 📁 Project Structure
+
+```
+contractor_landing_page/
+├── index.html                 # Main landing page
+├── script.js                  # Main JavaScript file (animations, form handling)
+├── faq.js                     # FAQ accordion functionality
+├── logo.svg                   # Company logo
+├── README.md                  # Project documentation
+├── CLAUDE.md                  # AI assistant instructions
+├── package.json               # Node.js dependencies and scripts
+├── netlify.toml              # Netlify configuration
+├── .gitignore                # Git ignore file
+└── Case Studies/
+    ├── estmtagent-case-study.html    # EstmtAgent project details
+    ├── skilldrop-case-study.html     # SkillDrop project details
+    └── viusbuilt-case-study.html     # ViusBuilt project details
+```
 
 ## Brand Elements
 
@@ -59,13 +123,38 @@ Edit the services section in `index.html` by copying the service card structure 
 ## Deployment
 
 This is a static website that can be deployed to any web hosting service:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3
-- Traditional web hosting
 
-Simply upload the files to your hosting service.
+### Netlify (Recommended for form functionality)
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Connect your repository to Netlify
+3. Deploy with default settings
+4. Configure form notifications in Netlify dashboard:
+   - Go to **Site Settings** → **Forms** → **Form notifications**
+   - Add email notification to `ismatulla@mansurov.dev`
+
+### Other Hosting Options
+- **GitHub Pages**: Free hosting for static sites
+- **Vercel**: Great for static sites with excellent performance
+- **AWS S3**: For enterprise-level hosting
+- **Traditional web hosting**: Simply upload files via FTP
+
+**Note**: Contact form functionality requires Netlify or a custom backend implementation.
+
+## Contact Form Setup
+
+The contact form uses Netlify Forms for processing submissions:
+
+1. **Netlify Forms** (current implementation):
+   - Automatically detected when deployed to Netlify
+   - Submissions stored in Netlify dashboard
+   - Email notifications configurable
+   - Spam protection included
+
+2. **Alternative Solutions**:
+   - Formspree
+   - EmailJS
+   - Custom backend API
+   - Google Forms integration
 
 ## Browser Support
 

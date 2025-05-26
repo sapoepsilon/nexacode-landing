@@ -405,9 +405,15 @@ if (contactForm) {
         if (!isValid) {
             field.classList.add('error');
             errorSpan?.classList.remove('hidden');
+            // Update icon color for enhanced form
+            const icon = field.parentElement.querySelector('.input-icon');
+            if (icon) icon.classList.add('text-red-500');
         } else {
             field.classList.remove('error');
             errorSpan?.classList.add('hidden');
+            // Reset icon color for enhanced form
+            const icon = field.parentElement.querySelector('.input-icon');
+            if (icon) icon.classList.remove('text-red-500');
         }
         
         return isValid;
@@ -433,8 +439,12 @@ if (contactForm) {
         
         // Disable button during submission
         const submitButton = contactForm.querySelector('button[type="submit"]');
+        const buttonText = submitButton.querySelector('.button-text');
+        const buttonIcon = submitButton.querySelector('.button-icon');
+        
         submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
+        if (buttonText) buttonText.textContent = 'Sending...';
+        if (buttonIcon) buttonIcon.classList.add('fa-spin');
         
         // Submit to Netlify Forms
         try {
@@ -471,7 +481,8 @@ if (contactForm) {
             alert('An error occurred. Please try again later.');
         } finally {
             submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
+            if (buttonText) buttonText.textContent = 'Send Message';
+            if (buttonIcon) buttonIcon.classList.remove('fa-spin');
         }
     });
 }
@@ -489,3 +500,154 @@ if (mobileMenuButton && navMenu) {
         });
     });
 }
+
+// Service Cards Component
+const servicesData = [
+    {
+        id: 'web-development',
+        title: 'Web Development',
+        description: 'Lightning-fast, SEO-optimized websites that captivate visitors and drive conversions',
+        icon: 'fas fa-laptop-code',
+        iconPosition: 'pl-2',
+        gradientFrom: 'from-secondary',
+        gradientTo: 'to-teal-600',
+        glowColor: 'bg-secondary',
+        hoverColor: 'group-hover:text-secondary',
+        checkColor: 'text-secondary',
+        features: [
+            'Custom Design',
+            'Responsive & Mobile-First',
+            'Performance Optimized'
+        ]
+    },
+    {
+        id: 'mobile-apps',
+        title: 'Mobile Apps',
+        description: 'Native and cross-platform apps that deliver exceptional user experiences',
+        icon: 'fas fa-mobile-screen',
+        iconPosition: 'pl-2',
+        gradientFrom: 'from-accent',
+        gradientTo: 'to-orange-600',
+        glowColor: 'bg-accent',
+        hoverColor: 'group-hover:text-accent',
+        checkColor: 'text-accent',
+        features: [
+            'iOS & Android',
+            'React Native',
+            'Flutter Apps'
+        ]
+    },
+    {
+        id: 'ai-integration',
+        title: 'AI Integration',
+        description: 'Intelligent solutions powered by cutting-edge artificial intelligence',
+        icon: 'fas fa-robot',
+        iconPosition: 'pl-2',
+        gradientFrom: 'from-primary',
+        gradientTo: 'to-indigo-700',
+        glowColor: 'bg-primary',
+        hoverColor: 'group-hover:text-indigo-600',
+        checkColor: 'text-indigo-600',
+        features: [
+            'Machine Learning',
+            'Natural Language',
+            'Computer Vision'
+        ]
+    },
+    {
+        id: 'custom-software',
+        title: 'Custom Software',
+        description: 'Bespoke solutions tailored to your unique business requirements',
+        icon: 'fas fa-microchip',
+        iconPosition: '',
+        gradientFrom: 'from-purple-600',
+        gradientTo: 'to-pink-600',
+        glowColor: 'bg-purple-600',
+        hoverColor: 'group-hover:text-purple-600',
+        checkColor: 'text-purple-600',
+        features: [
+            'Enterprise Solutions',
+            'API Development',
+            'Cloud Architecture'
+        ]
+    }
+];
+
+function createServiceCard(service) {
+    return `
+        <div class="service-card group">
+            <div class="service-icon-wrapper">
+                <div class="service-icon bg-gradient-to-br ${service.gradientFrom} ${service.gradientTo} group-hover:scale-110 md:group-hover:scale-110 rounded-full">
+                    <i class="${service.icon} text-white text-2xl md:text-3xl ${service.iconPosition}"></i>
+                </div>
+                <div class="icon-glow ${service.glowColor}"></div>
+            </div>
+            <h3 class="font-montserrat text-lg md:text-xl text-primary mb-2 md:mb-3 ${service.hoverColor} transition-colors">
+                ${service.title}
+            </h3>
+            <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
+                ${service.description}
+            </p>
+            <ul class="text-xs md:text-sm text-gray-600 space-y-1.5 md:space-y-2">
+                ${service.features.map(feature => `
+                    <li class="flex items-center">
+                        <i class="fas fa-check ${service.checkColor} mr-2"></i>${feature}
+                    </li>
+                `).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+function renderServiceCards() {
+    const servicesContainer = document.querySelector('#services-grid');
+    if (!servicesContainer) return;
+    
+    const servicesHTML = servicesData.map(service => createServiceCard(service)).join('');
+    servicesContainer.innerHTML = servicesHTML;
+    
+    // Re-apply animations and interactions to new elements
+    const newServiceCards = servicesContainer.querySelectorAll('.service-card');
+    
+    // Apply fade-in animation observer
+    newServiceCards.forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Apply mouse tracking for desktop
+    if (window.innerWidth > 768) {
+        newServiceCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--mouse-x', '50%');
+                card.style.setProperty('--mouse-y', '50%');
+            });
+        });
+    }
+    
+    // Apply touch feedback for mobile
+    newServiceCards.forEach(card => {
+        card.addEventListener('touchstart', () => {
+            card.classList.add('touch-active');
+        });
+        
+        card.addEventListener('touchend', () => {
+            setTimeout(() => {
+                card.classList.remove('touch-active');
+            }, 300);
+        });
+    });
+}
+
+// Initialize service cards when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    renderServiceCards();
+});

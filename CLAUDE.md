@@ -36,6 +36,16 @@ The site uses Tailwind CSS configured directly in index.html with custom colors:
 - Secondary: #1B998B (Vibrant Teal)
 - Accent: #FF9B71 (Coral Orange)
 
+### Design System Standards
+
+**Corner Radius Values:**
+- Small elements (badges, tags): `rounded` (0.25rem / 4px)
+- Medium elements (buttons, inputs): `rounded-lg` (0.5rem / 8px)
+- Large elements (cards, containers): `rounded-2xl` (1rem / 16px)
+- Extra large elements (hero sections, major containers): `rounded-3xl` (1.5rem / 24px)
+
+Always use these standardized corner radius values for consistency across the site.
+
 ## Key Implementation Details
 
 1. **No build process** - This is a static site that runs directly in the browser
