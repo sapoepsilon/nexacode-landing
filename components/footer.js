@@ -9,7 +9,7 @@ export function Footer() {
           </p>
           <div class="flex justify-center">
             <a
-              href="https://linkedin.com/company/eazytechnology"
+              href="https://www.linkedin.com/company/eazy-technology"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:text-secondary transition-colors"
